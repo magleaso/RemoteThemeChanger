@@ -70,7 +70,7 @@ Partial Class Form1
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.gridPCList)
         Me.Name = "Form1"
-        Me.Text = "Remote Theme Changer"
+        Me.Text = "PC List"
         CType(Me.gridPCList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
