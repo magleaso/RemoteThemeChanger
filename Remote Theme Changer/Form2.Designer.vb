@@ -80,6 +80,7 @@ Partial Class Form2
         Me.cmbResolution1.Name = "cmbResolution1"
         Me.cmbResolution1.Size = New System.Drawing.Size(121, 21)
         Me.cmbResolution1.TabIndex = 2
+        Me.cmbResolution1.Text = "Resolution"
         '
         'cmbResolution2
         '
@@ -89,6 +90,7 @@ Partial Class Form2
         Me.cmbResolution2.Name = "cmbResolution2"
         Me.cmbResolution2.Size = New System.Drawing.Size(121, 21)
         Me.cmbResolution2.TabIndex = 5
+        Me.cmbResolution2.Text = "Resolution"
         '
         'btnBrowse2
         '
@@ -114,6 +116,7 @@ Partial Class Form2
         Me.cmbResolution3.Name = "cmbResolution3"
         Me.cmbResolution3.Size = New System.Drawing.Size(121, 21)
         Me.cmbResolution3.TabIndex = 8
+        Me.cmbResolution3.Text = "Resolution"
         '
         'btnBrowse3
         '
@@ -139,6 +142,7 @@ Partial Class Form2
         Me.cmbResolution4.Name = "cmbResolution4"
         Me.cmbResolution4.Size = New System.Drawing.Size(121, 21)
         Me.cmbResolution4.TabIndex = 11
+        Me.cmbResolution4.Text = "Resolution"
         '
         'btnBrowse4
         '
@@ -164,6 +168,7 @@ Partial Class Form2
         Me.cmbResolution5.Name = "cmbResolution5"
         Me.cmbResolution5.Size = New System.Drawing.Size(121, 21)
         Me.cmbResolution5.TabIndex = 14
+        Me.cmbResolution5.Text = "Resolution"
         '
         'btnBrowse5
         '
@@ -189,6 +194,7 @@ Partial Class Form2
         Me.cmbResolution6.Name = "cmbResolution6"
         Me.cmbResolution6.Size = New System.Drawing.Size(121, 21)
         Me.cmbResolution6.TabIndex = 17
+        Me.cmbResolution6.Text = "Resolution"
         '
         'btnBrowse6
         '
@@ -269,7 +275,7 @@ Partial Class Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(473, 257)
+        Me.ClientSize = New System.Drawing.Size(473, 354)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)

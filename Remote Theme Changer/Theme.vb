@@ -1,33 +1,33 @@
 ﻿Imports Microsoft.VisualBasic
 
 Public Class Theme
-    Private _horizRes
+    Private pvHorizRes
     Public Property HorizRes As Integer
         Get
-            Return _horizRes
+            Return pvHorizRes
         End Get
         Set(value As Integer)
-            _horizRes = HorizRes
+            pvHorizRes = value
         End Set
     End Property
 
-    Private _vertRes
+    Private pvVertRes
     Public Property VertRes As Integer
         Get
-            Return _vertRes
+            Return pvVertRes
         End Get
         Set(value As Integer)
-            _vertRes = VertRes
+            pvVertRes = value
         End Set
     End Property
 
-    Private _path
+    Private pvPath
     Public Property Path As String
         Get
-            Return _path
+            Return pvPath
         End Get
         Set(value As String)
-            _path = Path
+            pvPath = value
         End Set
     End Property
 
