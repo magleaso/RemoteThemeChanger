@@ -49,7 +49,7 @@ Partial Class Form1
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(75, 23)
         Me.btnStart.TabIndex = 3
-        Me.btnStart.Text = "Start"
+        Me.btnStart.Text = "Next"
         Me.btnStart.UseVisualStyleBackColor = True
         '
         'lblHelp

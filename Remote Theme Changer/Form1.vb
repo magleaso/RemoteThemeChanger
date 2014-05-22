@@ -1,4 +1,10 @@
 ﻿Public Class Form1
+
+    Shared Sub Main()
+        Application.Run(New Form1())
+        Application.Run(New Form2())
+    End Sub
+
     Dim strLaunchArgs As String
     Dim strAdditionalArguments As String
     Dim arrPCList As New ArrayList
@@ -36,6 +42,7 @@
         Next
 
         '   Dear Shell,
+
         '       Please run that script that changes themes remotely with the provided arguments. You will find enclosed
         '   a strAdditionalArguments that can be quite helpful. Thanks, bro.
 
@@ -44,7 +51,13 @@
         '   Matt Gleason
 
         strLaunchArgs = "/c " & Chr(34) & "C:\Program Files\ThemeChanger\RemoteRegedit.vbs" & Chr(34) & " " & strAdditionalArguments
-        CmdAndWait(strLaunchArgs)
+
+        '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        'VVVVV                      IMPORTANT!!!!!! THIS MAKES THE SCRIPT LAUNCH                     VVVVV
+        '                                   CmdAndWait(strLaunchArgs)
+        '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        Me.Close()
+
     End Sub
 
     Private Sub lblHelp_Click(sender As Object, e As EventArgs) Handles lblHelp.Click
