@@ -50,7 +50,7 @@
 
         '   Matt Gleason
 
-        strLaunchArgs = "/c " & Chr(34) & "C:\Program Files\ThemeChanger\RemoteRegedit.vbs" & Chr(34) & " " & strAdditionalArguments
+        strLaunchArgs = "/c " & Chr(34) & "C:\Program Files\ThemeChanger\Launchpad.vbs" & Chr(34) & " " & strAdditionalArguments
 
         '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
         'VVVVV                      IMPORTANT!!!!!! THIS MAKES THE SCRIPT LAUNCH                     VVVVV
