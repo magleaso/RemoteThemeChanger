@@ -24,7 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.gridPCList = New System.Windows.Forms.DataGridView()
         Me.colPCList = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnStart = New System.Windows.Forms.Button()
+        Me.lblHelp = New System.Windows.Forms.Label()
         CType(Me.gridPCList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,30 +43,42 @@ Partial Class Form1
         Me.colPCList.HeaderText = "PC Name"
         Me.colPCList.Name = "colPCList"
         '
-        'Button1
+        'btnStart
         '
-        Me.Button1.Location = New System.Drawing.Point(457, 13)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnStart.Location = New System.Drawing.Point(405, 12)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(75, 23)
+        Me.btnStart.TabIndex = 3
+        Me.btnStart.Text = "Start"
+        Me.btnStart.UseVisualStyleBackColor = True
+        '
+        'lblHelp
+        '
+        Me.lblHelp.AutoSize = True
+        Me.lblHelp.Location = New System.Drawing.Point(435, 236)
+        Me.lblHelp.Name = "lblHelp"
+        Me.lblHelp.Size = New System.Drawing.Size(32, 13)
+        Me.lblHelp.TabIndex = 4
+        Me.lblHelp.Text = "Help!"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(628, 262)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(486, 262)
+        Me.Controls.Add(Me.lblHelp)
+        Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.gridPCList)
         Me.Name = "Form1"
         Me.Text = "Remote Theme Changer"
         CType(Me.gridPCList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents gridPCList As System.Windows.Forms.DataGridView
     Friend WithEvents colPCList As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnStart As System.Windows.Forms.Button
+    Friend WithEvents lblHelp As System.Windows.Forms.Label
 
 End Class
