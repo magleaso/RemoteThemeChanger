@@ -42,7 +42,7 @@
     Private Sub cmbResolution1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbResolution1.SelectedIndexChanged
         Dim strHorizRes As String
         Dim strVertRes As String
-            For counter As Integer = 0 To (cmbResolution1.Text.Length - 1)
+        For counter As Integer = 0 To (cmbResolution1.Text.Length - 1)
             If cmbResolution1.Text.Chars(counter) = "x" Or cmbResolution1.Text.Chars(counter) = "X" Then
                 strHorizRes = cmbResolution1.Text.Remove(counter, cmbResolution1.Text.Length - counter)
                 strVertRes = cmbResolution1.Text.Remove(0, counter + 1)
@@ -171,5 +171,23 @@
 
     Private Sub txtFilePath6_TextChanged(sender As Object, e As EventArgs) Handles txtFilePath6.TextChanged
         Theme6.Path = txtFilePath6.Text
+    End Sub
+
+    Private Sub chkManual_CheckedChanged(sender As Object, e As EventArgs) Handles chkManual.CheckedChanged
+        If chkManual.Checked = True Then
+            txtFilePath1.ReadOnly = False
+            txtFilePath2.ReadOnly = False
+            txtFilePath3.ReadOnly = False
+            txtFilePath4.ReadOnly = False
+            txtFilePath5.ReadOnly = False
+            txtFilePath6.ReadOnly = False
+        Else
+            txtFilePath1.ReadOnly = True
+            txtFilePath2.ReadOnly = True
+            txtFilePath3.ReadOnly = True
+            txtFilePath4.ReadOnly = True
+            txtFilePath5.ReadOnly = True
+            txtFilePath6.ReadOnly = True
+        End If
     End Sub
 End Class
