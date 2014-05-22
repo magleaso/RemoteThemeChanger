@@ -4,9 +4,11 @@
     Dim Theme3 As New Theme
     Dim Theme4 As New Theme
     Dim Theme5 As New Theme
-    Dim Theme6 As New Theme
+    Dim ThemeFallback As New Theme
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ToolTip1.InitialDelay = 150
+        ToolTip1.ReshowDelay = 100
+        ToolTip1.SetToolTip(Me.Label5, "What is this?")
     End Sub
 
     Private Sub btnBrowse1_Click(sender As Object, e As EventArgs) Handles btnBrowse1.Click
@@ -52,8 +54,6 @@
         Try
             Theme1.HorizRes = Convert.ToInt32(strHorizRes)
             Theme1.VertRes = Convert.ToInt32(strVertRes)
-            Debug.Print(Theme1.HorizRes)
-            Debug.Print(Theme1.VertRes)
         Catch
             MessageBox.Show("Please enter a valid value for the resolution")
         End Try
@@ -131,24 +131,6 @@
         End Try
     End Sub
 
-    Private Sub cmbResolution6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbResolution6.SelectedIndexChanged
-        Dim strHorizRes As String
-        Dim strVertRes As String
-        For counter As Integer = 0 To (cmbResolution6.Text.Length - 1)
-            If cmbResolution6.Text.Chars(counter) = "x" Or cmbResolution6.Text.Chars(counter) = "X" Then
-                strHorizRes = cmbResolution6.Text.Remove(counter, cmbResolution6.Text.Length - counter)
-                strVertRes = cmbResolution6.Text.Remove(0, counter + 1)
-                Exit For
-            End If
-        Next
-        Try
-            Theme6.HorizRes = Convert.ToInt32(strHorizRes)
-            Theme6.VertRes = Convert.ToInt32(strVertRes)
-        Catch
-            MessageBox.Show("Please enter a valid value for the resolution")
-        End Try
-    End Sub
-
     Private Sub txtFilePath1_TextChanged(sender As Object, e As EventArgs) Handles txtFilePath1.TextChanged
         Theme1.Path = txtFilePath1.Text
     End Sub
@@ -170,7 +152,7 @@
     End Sub
 
     Private Sub txtFilePath6_TextChanged(sender As Object, e As EventArgs) Handles txtFilePath6.TextChanged
-        Theme6.Path = txtFilePath6.Text
+        ThemeFallback.Path = txtFilePath6.Text
     End Sub
 
     Private Sub chkManual_CheckedChanged(sender As Object, e As EventArgs) Handles chkManual.CheckedChanged
@@ -189,5 +171,9 @@
             txtFilePath5.ReadOnly = True
             txtFilePath6.ReadOnly = True
         End If
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        MessageBox.Show("This is the themepack that will be applied if the computer" & vbNewLine & "does not fit any of the other resolutions." & vbNewLine & vbNewLine & "(1280x1024 is recommended)", "What was that?")
     End Sub
 End Class

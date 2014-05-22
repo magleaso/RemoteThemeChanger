@@ -22,6 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.fileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.txtFilePath1 = New System.Windows.Forms.TextBox()
         Me.btnBrowse1 = New System.Windows.Forms.Button()
@@ -45,12 +46,14 @@ Partial Class Form2
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.chkManual = New System.Windows.Forms.CheckBox()
-        Me.cmbResolution6 = New System.Windows.Forms.ComboBox()
         Me.cmbResolution5 = New System.Windows.Forms.ComboBox()
         Me.cmbResolution4 = New System.Windows.Forms.ComboBox()
         Me.cmbResolution3 = New System.Windows.Forms.ComboBox()
         Me.cmbResolution2 = New System.Windows.Forms.ComboBox()
         Me.cmbResolution1 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnNext = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'fileDialog1
@@ -227,22 +230,12 @@ Partial Class Form2
         'chkManual
         '
         Me.chkManual.AutoSize = True
-        Me.chkManual.Location = New System.Drawing.Point(345, 116)
+        Me.chkManual.Location = New System.Drawing.Point(12, 118)
         Me.chkManual.Name = "chkManual"
         Me.chkManual.Size = New System.Drawing.Size(116, 17)
         Me.chkManual.TabIndex = 22
         Me.chkManual.Text = "Allow Manual Entry"
         Me.chkManual.UseVisualStyleBackColor = True
-        '
-        'cmbResolution6
-        '
-        Me.cmbResolution6.FormattingEnabled = True
-        Me.cmbResolution6.Items.AddRange(New Object() {"640x480", "800x600", "1024x768", "1280x720", "1280x1024", "1440x900", "1600x900", "1600x1200", "1680x1050", "1920x1080"})
-        Me.cmbResolution6.Location = New System.Drawing.Point(12, 276)
-        Me.cmbResolution6.Name = "cmbResolution6"
-        Me.cmbResolution6.Size = New System.Drawing.Size(121, 21)
-        Me.cmbResolution6.TabIndex = 17
-        Me.cmbResolution6.Text = "Resolution"
         '
         'cmbResolution5
         '
@@ -294,17 +287,38 @@ Partial Class Form2
         Me.cmbResolution1.TabIndex = 2
         Me.cmbResolution1.Text = "Resolution"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Blue
+        Me.Label5.Location = New System.Drawing.Point(47, 279)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(86, 13)
+        Me.Label5.TabIndex = 23
+        Me.Label5.Text = "Fallback Theme:"
+        '
+        'btnNext
+        '
+        Me.btnNext.Location = New System.Drawing.Point(386, 110)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(75, 23)
+        Me.btnNext.TabIndex = 24
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(473, 309)
+        Me.Controls.Add(Me.btnNext)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.chkManual)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.cmbResolution6)
         Me.Controls.Add(Me.btnBrowse6)
         Me.Controls.Add(Me.txtFilePath6)
         Me.Controls.Add(Me.cmbResolution5)
@@ -351,10 +365,12 @@ Partial Class Form2
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents chkManual As System.Windows.Forms.CheckBox
-    Friend WithEvents cmbResolution6 As System.Windows.Forms.ComboBox
     Friend WithEvents cmbResolution5 As System.Windows.Forms.ComboBox
     Friend WithEvents cmbResolution4 As System.Windows.Forms.ComboBox
     Friend WithEvents cmbResolution3 As System.Windows.Forms.ComboBox
     Friend WithEvents cmbResolution2 As System.Windows.Forms.ComboBox
     Friend WithEvents cmbResolution1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents btnNext As System.Windows.Forms.Button
 End Class
