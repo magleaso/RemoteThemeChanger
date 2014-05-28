@@ -54,6 +54,7 @@ Partial Class Form2
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnNext = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'fileDialog1
@@ -193,25 +194,25 @@ Partial Class Form2
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(453, 13)
+        Me.Label1.Size = New System.Drawing.Size(435, 13)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Please select themepack files that can be accessed from every computer you plan t" & _
-    "o apply the"
+    "o apply" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(13, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(458, 13)
+        Me.Label2.Size = New System.Drawing.Size(406, 13)
         Me.Label2.TabIndex = 19
-        Me.Label2.Text = "theme to. A networked and unsecured location such as \\caqfile\data\shared is rec" & _
-    "ommended."
+        Me.Label2.Text = "the theme to. A networked and unsecured location such as \\caqfile\data\shared is" & _
+    " "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 56)
+        Me.Label3.Location = New System.Drawing.Point(12, 75)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(443, 13)
         Me.Label3.TabIndex = 20
@@ -221,7 +222,7 @@ Partial Class Form2
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 73)
+        Me.Label4.Location = New System.Drawing.Point(12, 92)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(117, 13)
         Me.Label4.TabIndex = 21
@@ -307,11 +308,21 @@ Partial Class Form2
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(15, 43)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(77, 13)
+        Me.Label6.TabIndex = 25
+        Me.Label6.Text = "recommended."
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(473, 309)
+        Me.ClientSize = New System.Drawing.Size(475, 309)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.chkManual)
@@ -373,4 +384,5 @@ Partial Class Form2
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents btnNext As System.Windows.Forms.Button
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

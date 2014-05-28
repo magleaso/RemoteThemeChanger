@@ -41,7 +41,7 @@
         txtFilePath6.Text = fileDialog6.FileName
     End Sub
 
-    Private Sub cmbResolution1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbResolution1.SelectedIndexChanged
+    Private Sub comboBoxCheck1
         Dim strHorizRes As String
         Dim strVertRes As String
         For counter As Integer = 0 To (cmbResolution1.Text.Length - 1)
@@ -54,12 +54,15 @@
         Try
             Theme1.HorizRes = Convert.ToInt32(strHorizRes)
             Theme1.VertRes = Convert.ToInt32(strVertRes)
+            If Theme1.HorizRes = 0 Or Theme1.VertRes = 0 Then
+                MessageBox.Show("Please enter a valid resolution in the first box.", "Invalid First Resolution")
+            End If
         Catch
-            MessageBox.Show("Please enter a valid value for the resolution")
+            MessageBox.Show("Please enter a valid value for the first resolution")
         End Try
     End Sub
 
-    Private Sub cmbResolution2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbResolution2.SelectedIndexChanged
+    Private Sub comboBoxCheck2()
         Dim strHorizRes As String
         Dim strVertRes As String
         For counter As Integer = 0 To (cmbResolution2.Text.Length - 1)
@@ -72,12 +75,15 @@
         Try
             Theme2.HorizRes = Convert.ToInt32(strHorizRes)
             Theme2.VertRes = Convert.ToInt32(strVertRes)
+            If Theme2.HorizRes = 0 Or Theme2.VertRes = 0 Then
+                MessageBox.Show("Please enter a valid resolution in the second box.", "Invalid Second Resolution")
+            End If
         Catch
-            MessageBox.Show("Please enter a valid value for the resolution")
+            MessageBox.Show("Please enter a valid value for the second resolution")
         End Try
     End Sub
 
-    Private Sub cmbResolution3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbResolution3.SelectedIndexChanged
+    Private Sub comboBoxCheck3()
         Dim strHorizRes As String
         Dim strVertRes As String
         For counter As Integer = 0 To (cmbResolution3.Text.Length - 1)
@@ -90,12 +96,15 @@
         Try
             Theme3.HorizRes = Convert.ToInt32(strHorizRes)
             Theme3.VertRes = Convert.ToInt32(strVertRes)
+            If Theme3.HorizRes = 0 Or Theme3.VertRes = 0 Then
+                MessageBox.Show("Please enter a valid resolution in the third box.", "Invalid Third Resolution")
+            End If
         Catch
-            MessageBox.Show("Please enter a valid value for the resolution")
+            MessageBox.Show("Please enter a valid value for the third resolution")
         End Try
     End Sub
 
-    Private Sub cmbResolution4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbResolution4.SelectedIndexChanged
+    Private Sub comboBoxCheck4()
         Dim strHorizRes As String
         Dim strVertRes As String
         For counter As Integer = 0 To (cmbResolution4.Text.Length - 1)
@@ -108,12 +117,15 @@
         Try
             Theme4.HorizRes = Convert.ToInt32(strHorizRes)
             Theme4.VertRes = Convert.ToInt32(strVertRes)
+            If Theme4.HorizRes = 0 Or Theme4.VertRes = 0 Then
+                MessageBox.Show("Please enter a valid resolution in the fourth box.", "Invalid Fourth Resolution")
+            End If
         Catch
-            MessageBox.Show("Please enter a valid value for the resolution")
+            MessageBox.Show("Please enter a valid value for the fourth resolution")
         End Try
     End Sub
 
-    Private Sub cmbResolution5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbResolution5.SelectedIndexChanged
+    Private Sub comboBoxCheck5()
         Dim strHorizRes As String
         Dim strVertRes As String
         For counter As Integer = 0 To (cmbResolution5.Text.Length - 1)
@@ -126,8 +138,11 @@
         Try
             Theme5.HorizRes = Convert.ToInt32(strHorizRes)
             Theme5.VertRes = Convert.ToInt32(strVertRes)
+            If Theme5.HorizRes = 0 Or Theme5.VertRes = 0 Then
+                MessageBox.Show("Please enter a valid resolution in the fifth box.", "Invalid Fifth Resolution")
+            End If
         Catch
-            MessageBox.Show("Please enter a valid value for the resolution")
+            MessageBox.Show("Please enter a valid value for the fifth resolution")
         End Try
     End Sub
 
@@ -175,5 +190,14 @@
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
         MessageBox.Show("This is the themepack that will be applied if the computer" & vbNewLine & "does not fit any of the other resolutions." & vbNewLine & vbNewLine & "(1280x1024 is recommended)", "What was that?")
+    End Sub
+
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        comboBoxCheck1()
+        comboBoxCheck2()
+        comboBoxCheck3()
+        comboBoxCheck4()
+        comboBoxCheck5()
+
     End Sub
 End Class
