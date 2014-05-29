@@ -1,5 +1,6 @@
 ﻿Imports Microsoft.VisualBasic
 
+'create a class that will hold multiple values for each of the 6 themes (5 themes and a fallback)
 Public Class Theme
     Private pvHorizRes
     Public Property HorizRes As Integer

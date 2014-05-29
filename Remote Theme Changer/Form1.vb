@@ -1,6 +1,7 @@
 ﻿Public Class Form1
 
     Shared Sub Main()
+        'Allows the application to have multiple windows
         Application.Run(New Form1())
         Application.Run(New Form2())
     End Sub
@@ -9,10 +10,12 @@
     Dim strAdditionalArguments As String
     Dim arrPCList As New ArrayList
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'sets width of the datagridview
         colPCList.Width = 344
     End Sub
 
     Public Sub CmdAndWait(ByVal ProcessArgs As String)
+        'run a cmd window capable of passing info back to the program
         Dim objProcess As System.Diagnostics.Process
         Try
             objProcess = New System.Diagnostics.Process()
@@ -25,7 +28,6 @@
             'Wait until the process passes back an exit code
             'objProcess.WaitForExit()
 
-            'Free resources associated with this process
             objProcess.Close()
         Catch
             MessageBox.Show("Could not start process cmd.exe with args " & Chr(34) & ProcessArgs & Chr(34), "Error")
@@ -34,10 +36,12 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnStart.Click
         For Each row As DataGridViewRow In gridPCList.Rows
+            'add the first column in each row to an array
             arrPCList.Add(row.Cells(0).Value)
         Next
 
         For i As Integer = 0 To arrPCList.Count - 1
+            'take all the PC's in that array and string them together as arguments
             strAdditionalArguments += arrPCList(i) & " "
         Next
 
@@ -56,6 +60,8 @@
         'VVVVV                      IMPORTANT!!!!!! THIS MAKES THE SCRIPT LAUNCH                     VVVVV
         '                                   CmdAndWait(strLaunchArgs)
         '||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+        'transition to form2
         Me.Close()
 
     End Sub

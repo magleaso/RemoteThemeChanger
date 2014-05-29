@@ -6,14 +6,17 @@
     Dim Theme5 As New Theme
     Dim ThemeFallback As New Theme
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Tooltip needs to appear quickly to offer an explanation for the fallback theme
         ToolTip1.InitialDelay = 150
         ToolTip1.ReshowDelay = 100
         ToolTip1.SetToolTip(Me.Label5, "What is this?")
     End Sub
 
     Private Sub btnBrowse1_Click(sender As Object, e As EventArgs) Handles btnBrowse1.Click
+        'Open a file browser and set the corresponding textbox equal to the selected file
         fileDialog1.ShowDialog()
         txtFilePath1.Text = fileDialog1.FileName
+        'will not comment the other 5 copies. they're the same concept
     End Sub
 
     Private Sub btnBrowse2_Click(sender As Object, e As EventArgs) Handles btnBrowse2.Click
@@ -44,6 +47,7 @@
     Private Sub comboBoxCheck1
         Dim strHorizRes As String
         Dim strVertRes As String
+        'set the vertical and horizontal resolution to be converted to integers based on the contents of the combo box
         For counter As Integer = 0 To (cmbResolution1.Text.Length - 1)
             If cmbResolution1.Text.Chars(counter) = "x" Or cmbResolution1.Text.Chars(counter) = "X" Then
                 strHorizRes = cmbResolution1.Text.Remove(counter, cmbResolution1.Text.Length - counter)
@@ -52,6 +56,7 @@
             End If
         Next
         Try
+            'convert them to integers and define the appropriate properties of the Theme Class
             Theme1.HorizRes = Convert.ToInt32(strHorizRes)
             Theme1.VertRes = Convert.ToInt32(strVertRes)
             If Theme1.HorizRes = 0 Or Theme1.VertRes = 0 Then
@@ -147,6 +152,7 @@
     End Sub
 
     Private Sub txtFilePath1_TextChanged(sender As Object, e As EventArgs) Handles txtFilePath1.TextChanged
+        'define the Path property
         Theme1.Path = txtFilePath1.Text
     End Sub
 
@@ -171,6 +177,7 @@
     End Sub
 
     Private Sub chkManual_CheckedChanged(sender As Object, e As EventArgs) Handles chkManual.CheckedChanged
+        'allow or disallow manual filepath entry
         If chkManual.Checked = True Then
             txtFilePath1.ReadOnly = False
             txtFilePath2.ReadOnly = False
